@@ -138,8 +138,7 @@
                             <a href="index.html" class="nav-item nav-link active">Home</a>
                             <a href="shop.html" class="nav-item nav-link">boutique</a>
                             <a href="detail.html" class="nav-item nav-link">Shop Detail</a>
-                            
-                        
+        
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
                         <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
