@@ -1,4 +1,6 @@
-<?php 
+<?php
+
+    
 
     require_once 'view/header_view.php';
 

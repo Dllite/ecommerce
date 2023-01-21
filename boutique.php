@@ -1,5 +1,7 @@
 <?php 
 
+
+
     require_once 'view/header_view.php';
 
     require_once 'view/view_shop.php';

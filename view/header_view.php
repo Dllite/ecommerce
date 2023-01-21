@@ -43,8 +43,8 @@
                     <div class="btn-group">
                         <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">Mon compte</button>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <button class="dropdown-item" type="button">se connecter</button>
-                            <button class="dropdown-item" type="button">creer un compte</button>
+                            <button class="dropdown-item" type="button">Se connecter</button>
+                            <button class="dropdown-item" type="button">Créer un compte</button>
                         </div>
                     </div>
                     <div class="btn-group mx-2">
@@ -136,8 +136,8 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
                             <a href="index.php" class="nav-item nav-link active">Accueil</a>
-                            <a href="shop.html" class="nav-item nav-link">boutique</a>
-                            <a href="detail.html" class="nav-item nav-link">Shop Detail</a>
+                            <a href="boutique" class="nav-item nav-link">Boutique</a>
+                            <a href="detail.html" class="nav-item nav-link"></a>
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
                         <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
