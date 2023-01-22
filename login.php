@@ -1,13 +1,14 @@
 <?php
 
     require_once "vendor/autoload.php";
+    require_once "controller/db.php";
     session_start();
     
 
-   /* if(isset($_SESSION["auth"])){
+    if(isset($_SESSION["auth"])){
         header("location:index.php");
         exit;
-    }*/
+    }
 
     $client = new Google\Client();
     $client->setClientId("404830657579-4ar9t16a2p92502n40o9omq4an5ch3qt.apps.googleusercontent.com");
@@ -15,6 +16,23 @@
     $client->setRedirectUri("http://localhost/ecommerce/login.php");
     $client->addScope("email");
     $client->addScope("profile");
+
+    if(isset($_POST['connexion'])){
+        extract($_POST);
+        
+        var_dump($_POST);
+        $login = $db->query("SELECT * FROM client WHERE email='$email' && motdepasse='$password'");
+        $verif = mysqli_num_rows($login);
+        if($verif==1){
+            header("location:index.php");
+        }else{
+            echo "Email ou nom d'utilisateur ou mot passe incorrect";
+        }
+    }
+    if(isset($_POST['inscription'])){
+        extract($_POST);
+        
+    }
 
 
 
@@ -41,13 +59,13 @@
             <div class="form login">
                 <div class="form-content">
                     <header>Connexion</header>
-                    <form action="#">
+                    <form action="#" method="POST">
                         <div class="field input-field">
-                            <input type="email" placeholder="Email" class="input">
+                            <input type="email" placeholder="Email" name="email"class="input">
                         </div>
 
                         <div class="field input-field">
-                            <input type="password" placeholder="Mot de passe" class="password">
+                            <input type="password" placeholder="Mot de passe" name="password" class="password">
                             <i class='bx bx-hide eye-icon'></i>
                         </div>
 
@@ -56,7 +74,7 @@
                         </div>
 
                         <div class="field button-field">
-                            <button>Connexion</button>
+                            <button name="connexion">Connexion</button>
                         </div>
                     </form>
 
@@ -86,7 +104,7 @@
 
                         $oauth = new Google\Service\Oauth2($client);
                         $info = $oauth->userinfo->get();
-                        var_dump($info);
+                        //var_dump($info);
 
                         $_SESSION['auth'] = true;
                         $_SESSION['name'] = $info->name;
@@ -109,7 +127,7 @@
             <div class="form signup">
                 <div class="form-content">
                     <header>Inscription</header>
-                    <form action="#">
+                    <form action="#" method="POST">
                         <div class="field input-field">
                             <input type="email" placeholder="Email" class="input">
                         </div>
@@ -124,7 +142,7 @@
                         </div>
 
                         <div class="field button-field">
-                            <button>S'inscrire</button>
+                            <button name="inscription">S'inscrire</button>
                         </div>
                     </form>
 
@@ -146,16 +164,21 @@
 
                 <?php
                      if(isset($_GET['code'])){
-                        $token= $client->fetchAccessTokenWithAuthCode($_GET['code']);
-                        $client->setAccessToken($token['access_token']);
+                        //$token= $client->fetchAccessTokenWithAuthCode($_GET['code']);
+                        $client->authenticate($_GET['code']);
+                        $access_token = $client->getAccessToken();
+                        $client->setAccessToken($access_token);
+                        //$token=$client->getAccessToken();
+                        $client->setAccessToken($access_token);
 
-                        $auth = new Google\Service\Oauth2($client);
+                        $oauth = new Google\Service\Oauth2($client);
                         $info = $oauth->userinfo->get();
-                        var_dump($info);
+                        //var_dump($info);
 
                         $_SESSION['auth'] = true;
                         $_SESSION['name'] = $info->name;
                         header("location:index.php");
+                        //echo $_SESSION['name'];
 
                      }else{
                         echo '<a href="'. $client->createAuthUrl().'" class="field google">

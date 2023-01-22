@@ -41,11 +41,16 @@
             <div class="col-lg-6 text-center text-lg-right">
                 <div class="d-inline-flex align-items-center">
                     <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">Mon compte</button>
+                        <?php 
+                        if(isset($_SESSION['auth'])){
+                            echo  '<a href="deconnexion.php" class="btn btn-sm btn-light ">Deconnexion</a>';
+                        }else { echo
+                        '<button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">Mon compte</button>
                         <div class="dropdown-menu dropdown-menu-right">
                             <a href="login.php" class="dropdown-item" type="button">Se connecter</a>
                             <a href="login.php" class="dropdown-item" type="button">Créer un compte</array_key_exists>
-                        </div>
+                        </div>';}
+                        ?>
                     </div>
                     <div class="btn-group mx-2">
                         <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">FCFA</button>

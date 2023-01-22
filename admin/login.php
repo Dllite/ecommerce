@@ -1,9 +1,11 @@
 <?php 
     require_once "controller/db.php";
+    session_start();
 
-    if(isset($_GET['connexion'])){
-       { 
-            extract($_POST);
+    if(isset($_POST['connexion'])){
+       { extract($_POST);
+  var_dump($_POST);
+            
             $login = $db->query("SELECT * FROM 'administrateur' WHERE email='$email' && motdepasse='$password'");
             $verif= mysqli_num_rows($login);
             if($verif==1){
@@ -27,15 +29,7 @@
     Connexion - Bayam Sallam
   </title>
   <!--     Fonts and icons     -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-  <!-- Nucleo Icons -->
-  <link href="assets/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
-  <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
-  <!-- CSS Files -->
-  <link id="pagestyle" href="assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
+  
 </head>
 
 <body class="">
@@ -97,7 +91,7 @@
                   <p class="mb-0">Entrer votre adresse email et mot de passe</p>
                 </div>
                 <div class="card-body">
-                  <form  method="POST">
+                  <form method="POST">
                     <div class="mb-3">
                       <input type="email" name="email" class="form-control form-control-lg" placeholder="Email" />
                       <small class="text-danger">Email invalide</small>
@@ -111,8 +105,8 @@
                       <label class="form-check-label" for="rememberMe">Se souvenir de moi</label>
                     </div>
                     <div class="text-center">
-                      <button type="button" class="btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0" name="connexion">Connexion</button>
-                      <a href="?connexion" name="connexion">Connexion </a>
+                      <button type="button"  name="connexion">Connexion</button>
+                     <input type="button" name="connexion" value="envoyer">
                     </div>
                   </form>
                 </div>
@@ -137,7 +131,7 @@
       </div>
     </section>
   </main>
-  <!--   Core JS Files   -->
+  <!--   Core JS Files   
   <script src="assets/js/core/popper.min.js"></script>
   <script src="assets/js/core/bootstrap.min.js"></script>
   <script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
@@ -151,10 +145,9 @@
       Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
     }
   </script>
-  <!-- Github buttons -->
+  
   <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="assets/js/argon-dashboard.min.js?v=2.0.4"></script>
+  <script src="assets/js/argon-dashboard.min.js?v=2.0.4"></script>-->
 </body>
 
 </html>
