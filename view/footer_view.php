@@ -2,11 +2,11 @@
 <div class="container-fluid bg-dark text-secondary mt-5 pt-5">
         <div class="row px-xl-5 pt-5">
             <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
-                <h5 class="text-secondary text-uppercase mb-4">Get In Touch</h5>
-                <p class="mb-4">No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et et dolor sed dolor. Rebum tempor no vero est magna amet no</p>
-                <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>123 Street, New York, USA</p>
-                <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>info@example.com</p>
-                <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>+012 345 67890</p>
+                <h5 class="text-secondary text-uppercase mb-4">Bayam Sallam</h5>
+                <p class="mb-4">Bayam Sallam est un site de vente des produits au Cameroun, acheter depuis le canapé de votre salon et faites vous livrés dans les minutes qui suivent.</p>
+                <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>Douala, Cameroun</p>
+                <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>info@bayamsaller.com</p>
+                <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>+237 345 67890</p>
             </div>
             <div class="col-lg-8 col-md-12">
                 <div class="row">
@@ -38,7 +38,7 @@
                             <div class="input-group">
                                 <input type="text" class="form-control" placeholder="Votre adresse email">
                                 <div class="input-group-append">
-                                    <button class="btn btn-primary">Sign Up</button>
+                                    <button class="btn btn-primary">S'abonner</button>
                                 </div>
                             </div>
                         </form>
@@ -56,7 +56,7 @@
         <div class="row border-top mx-xl-5 py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
             <div class="col-md-6 px-xl-0">
                 <p class="mb-md-0 text-center text-md-left text-secondary">
-                    &copy; <a class="text-primary" href="#">2023</a>. Tous droit réservés.
+                    &copy; <a class="text-primary" href="#">Bayam Sellam - 2023</a>. Tous droit réservés.
                     
                 </p>
             </div>
