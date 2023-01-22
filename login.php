@@ -115,11 +115,11 @@
                         </div>
 
                         <div class="field input-field">
-                            <input type="password" placeholder="Create password" class="password">
+                            <input type="password" placeholder="Definir un mot de passe" class="password">
                         </div>
 
                         <div class="field input-field">
-                            <input type="password" placeholder="Confirm password" class="password">
+                            <input type="password" placeholder="Confirmer le mot de passe" class="password">
                             <i class='bx bx-hide eye-icon'></i>
                         </div>
 
@@ -138,7 +138,7 @@
                 <div class="media-options">
                     <a href="#" class="field facebook">
                         <i class='bx bxl-facebook facebook-icon'></i>
-                        <span>Login with Facebook</span>
+                        <span>Connexion avec Facebook</span>
                     </a>
                 </div>
 
