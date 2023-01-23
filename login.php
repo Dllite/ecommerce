@@ -2,6 +2,7 @@
 
     require_once "vendor/autoload.php";
     require_once "controller/db.php";
+    require_once "_function/funtion.php";
     session_start();
     
 
@@ -16,28 +17,55 @@
     $client->setRedirectUri("http://localhost/ecommerce/login.php");
     $client->addScope("email");
     $client->addScope("profile");
+    $errors[]="";
 
     if(isset($_POST['connexion'])){
         extract($_POST);
-        
-        var_dump($_POST);
-        $login = $db->query("SELECT * FROM client WHERE email='$email' && motdepasse='$password'");
-        $verif = mysqli_num_rows($login);
-        if($verif==1){
-            $_SESSION['auth']=TRUE;
-            header("location:index.php");
-        }else{
-            echo "Email ou nom d'utilisateur ou mot passe incorrect";
+         if(empty($email)){
+            $errors['email'] = "Champ obligatoire";
+          }
+          if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+            $errors['email'] = "Email invalide";
+          }
+          if(empty($password)){
+            $errors['password'] = "Champ obligatoire";
+          }
+        if($email&&$password){
+            
+            $login = $db->query("SELECT * FROM client WHERE email='$email' && motdepasse='$password'");
+            $verif = mysqli_num_rows($login);
+            if($verif==1){
+                $_SESSION['auth']=TRUE;
+                header("location:index.php");
+            }else{
+                echo "Email ou nom d'utilisateur ou mot passe incorrect";
+            
+            }
         }
+        
     }
     if(isset($_POST['inscription'])){
         extract($_POST);
         var_dump($_POST);
-        $inscription = $db->query("INSERT INTO client VALUES(NULL, '$username', '$email', '$password')");
-        if($inscription==TRUE){
-            echo "Inscription terminé";
-        }else{
-            echo "echec";
+        if(empty($username)){
+            $errors['username'] = "Champ obligatoire";
+        }
+        if(empty($password)){
+            $errors['password'] = "Champ obligatoire";
+        }else if(mb_strlen($password)<6){
+            $errors['password'] = "Doit avoir au moins 6 caractères";
+        }
+        if($password!=$rpassword){
+            $errors['password']="Les mots de passe ne sont pas";
+        }
+
+        if($username&&$password&&$password){
+            $inscription = $db->query("INSERT INTO client VALUES(NULL, '$username', '$email', '$password')");
+            if($inscription==TRUE){
+                echo "Inscription terminé";
+            }else{
+                echo "echec";
+            }
         }
 
     }
@@ -53,7 +81,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Responsive Login and Signup Form </title>
+        <title> Connexion - Bayam Sallam </title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="asset/css/style.css">
@@ -68,12 +96,16 @@
                 <div class="form-content">
                     <header>Connexion</header>
                     <form action="#" method="POST">
+                    
                         <div class="field input-field">
+                        <small class="text-danger"> <?= display_errors($errors, 'email')?></small>
                             <input type="email" placeholder="Email" name="email"class="input">
+                            <small class="text-danger"> <?= display_errors($errors, 'email')?></small>
                         </div>
 
                         <div class="field input-field">
                             <input type="password" placeholder="Mot de passe" name="password" class="password">
+                            <small class="text-danger"> <?= display_errors($errors, 'password')?></small>
                             <i class='bx bx-hide eye-icon'></i>
                         </div>
 
