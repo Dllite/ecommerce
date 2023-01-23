@@ -292,7 +292,7 @@
                   document.write(new Date().getFullYear())
                 </script>,
                   Copyright - 
-                <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">LITE CORP</a>
+                <a href="#" class="font-weight-bold" target="_blank">LITE CORP</a>
                 
               </div>
             </div>
