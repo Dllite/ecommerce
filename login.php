@@ -24,6 +24,7 @@
         $login = $db->query("SELECT * FROM client WHERE email='$email' && motdepasse='$password'");
         $verif = mysqli_num_rows($login);
         if($verif==1){
+            $_SESSION['auth']=TRUE;
             header("location:index.php");
         }else{
             echo "Email ou nom d'utilisateur ou mot passe incorrect";
@@ -31,7 +32,14 @@
     }
     if(isset($_POST['inscription'])){
         extract($_POST);
-        
+        var_dump($_POST);
+        $inscription = $db->query("INSERT INTO client VALUES(NULL, '$username', '$email', '$password')");
+        if($inscription==TRUE){
+            echo "Inscription terminé";
+        }else{
+            echo "echec";
+        }
+
     }
 
 
@@ -128,16 +136,19 @@
                 <div class="form-content">
                     <header>Inscription</header>
                     <form action="#" method="POST">
+                        
                         <div class="field input-field">
-                            <input type="email" placeholder="Email" class="input">
+                            <input type="text" placeholder="Nom d'utilisateur" name="username" class="input">
+                        </div>
+                        <div class="field input-field">
+                            <input type="email" placeholder="Email" name="email" class="input">
+                        </div>
+                        <div class="field input-field">
+                            <input type="password" placeholder="Definir un mot de passe" name="password" class="password">
                         </div>
 
                         <div class="field input-field">
-                            <input type="password" placeholder="Definir un mot de passe" class="password">
-                        </div>
-
-                        <div class="field input-field">
-                            <input type="password" placeholder="Confirmer le mot de passe" class="password">
+                            <input type="password" placeholder="Confirmer le mot de passe" name="rpassword" class="password">
                             <i class='bx bx-hide eye-icon'></i>
                         </div>
 
