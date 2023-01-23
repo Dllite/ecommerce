@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -121,6 +122,12 @@
     <!-- Navbar -->
     <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl " id="navbarBlur"
       data-scroll="false">
+=======
+<?php
+  require_once "view/admin_header_view.php";
+?>
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl " id="navbarBlur" data-scroll="false">
+>>>>>>> 8542f088fd76adf496ea78f4cdfc8ceca2efd04c
       <div class="container-fluid py-1 px-3">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
@@ -250,13 +257,21 @@
               <div class="row">
                 <div class="col-8">
                   <div class="numbers">
+<<<<<<< HEAD
                     <p class="text-sm mb-0 text-uppercase font-weight-bold">monnaie de la journées</p>
+=======
+                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Vente d'aujoud'hui</p>
+>>>>>>> 8542f088fd76adf496ea78f4cdfc8ceca2efd04c
                     <h5 class="font-weight-bolder">
                       $53,000
                     </h5>
                     <p class="mb-0">
                       <span class="text-success text-sm font-weight-bolder">+55%</span>
+<<<<<<< HEAD
                       depuis hier
+=======
+                      Depuis hier 
+>>>>>>> 8542f088fd76adf496ea78f4cdfc8ceca2efd04c
                     </p>
                   </div>
                 </div>
@@ -275,7 +290,11 @@
               <div class="row">
                 <div class="col-8">
                   <div class="numbers">
+<<<<<<< HEAD
                     <p class="text-sm mb-0 text-uppercase font-weight-bold">Monnaie de la journée de l'utilisateur</p>
+=======
+                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Nouveau client </p>
+>>>>>>> 8542f088fd76adf496ea78f4cdfc8ceca2efd04c
                     <h5 class="font-weight-bolder">
                       2,300
                     </h5>
@@ -411,6 +430,7 @@
           </div>
         </div>
       </div>
+<<<<<<< HEAD
       <div class="row mt-4">
         <div class="col-lg-7 mb-lg-0 mb-4">
           <div class="card ">
@@ -623,6 +643,9 @@
           </div>
         </div>
       </div>
+=======
+      
+>>>>>>> 8542f088fd76adf496ea78f4cdfc8ceca2efd04c
       <footer class="footer pt-3  ">
         <div class="container-fluid">
           <div class="row align-items-center justify-content-lg-between">
@@ -632,14 +655,17 @@
                 <script>
                   document.write(new Date().getFullYear())
                 </script>,
-                made with <i class="fa fa-heart"></i> by
-                <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">Creative Tim</a>
-                for a better web.
+                  Copyright - 
+                <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">LITE CORP</a>
+                
               </div>
             </div>
             <div class="col-lg-6">
               <ul class="nav nav-footer justify-content-center justify-content-lg-end">
+      
+               
                 <li class="nav-item">
+<<<<<<< HEAD
                   <a href="https://www.creative-tim.com" class="nav-link text-muted" target="_blank">Creative Tim</a>
                 </li>
                 <li class="nav-item">
@@ -652,7 +678,11 @@
                 <li class="nav-item">
                   <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-muted"
                     target="_blank">License</a>
+=======
+                  <a href="localhost/ecommerce" class="nav-link text-muted" target="_blank">Bayam Sallam</a>
+>>>>>>> 8542f088fd76adf496ea78f4cdfc8ceca2efd04c
                 </li>
+                
               </ul>
             </div>
           </div>
@@ -668,7 +698,7 @@
       <div class="card-header pb-0 pt-3 ">
         <div class="float-start">
           <h5 class="mt-3 mb-0"> Configuration</h5>
-          <p>See our dashboard options.</p>
+         
         </div>
         <div class="float-end mt-4">
           <button class="btn btn-link text-dark p-0 fixed-plugin-close-button">
@@ -681,7 +711,7 @@
       <div class="card-body pt-sm-3 pt-0 overflow-auto">
         <!-- Sidebar Backgrounds -->
         <div>
-          <h6 class="mb-0">Sidebar Colors</h6>
+          <h6 class="mb-0">Couleur du menu</h6>
         </div>
         <a href="javascript:void(0)" class="switch-trigger background-color">
           <div class="badge-colors my-2 text-start">
@@ -696,8 +726,8 @@
         </a>
         <!-- Sidenav Type -->
         <div class="mt-3">
-          <h6 class="mb-0">Sidenav Type</h6>
-          <p class="text-sm">Choose between 2 different sidenav types.</p>
+          <h6 class="mb-0">Type de navigation</h6>
+          <p class="text-sm">Choisissez parmi ces deux types.</p>
         </div>
         <div class="d-flex">
           <button class="btn bg-gradient-primary w-100 px-3 mb-2 active me-2" data-class="bg-white"
@@ -708,14 +738,14 @@
         <p class="text-sm d-xl-none d-block mt-2">You can change the sidenav type just on desktop view.</p>
         <!-- Navbar Fixed -->
         <div class="d-flex my-3">
-          <h6 class="mb-0">Navbar Fixed</h6>
+          <h6 class="mb-0">Navigation fixe</h6>
           <div class="form-check form-switch ps-0 ms-auto my-auto">
             <input class="form-check-input mt-1 ms-auto" type="checkbox" id="navbarFixed" onclick="navbarFixed(this)">
           </div>
         </div>
         <hr class="horizontal dark my-sm-4">
         <div class="mt-2 mb-5 d-flex">
-          <h6 class="mb-0">Light / Dark</h6>
+          <h6 class="mb-0">Clair / Sombre</h6>
           <div class="form-check form-switch ps-0 ms-auto my-auto">
             <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
           </div>
