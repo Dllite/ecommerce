@@ -15,11 +15,11 @@
                     <h5 class="text-secondary text-uppercase mb-4">Boutique</h5>
                     <div class="d-flex flex-column justify-content-start">
                         <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Accueil</a>
-                        <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Shop</a>
-                        <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a>
-                        <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
-                        <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Checkout</a>
-                        <a class="text-secondary" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                        <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Notre Boutique</a>
+                        <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Detail</a>
+                        <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Carte d'achat</a>
+                        <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Verifier</a>
+                        <a class="text-secondary" href="#"><i class="fa fa-angle-right mr-2"></i>Contactez nous</a>
                     </div>
                 </div>
                 <div class="col-md-4 mb-5">
@@ -29,12 +29,12 @@
                         <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Notre boutique</a>
                         <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Detail des
                             produits</a>
-                        <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Checkout</a>
+                        <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Verifier</a>
                         <a class="text-secondary" href="#"><i class="fa fa-angle-right mr-2"></i>Contactez nous </a>
                     </div>
                 </div>
                 <div class="col-md-4 mb-5">
-                    <h5 class="text-secondary text-uppercase mb-4">Newsletter</h5>
+                    <h5 class="text-secondary text-uppercase mb-4">Ecrire un commentaire</h5>
                     <p>Duo stet tempor ipsum sit amet magna ipsum tempor est</p>
                     <form action="">
                         <div class="input-group">

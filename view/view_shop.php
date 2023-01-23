@@ -3,7 +3,7 @@
     <div class="row px-xl-5">
         <div class="col-12">
             <nav class="breadcrumb bg-light mb-30">
-                <a class="breadcrumb-item text-dark" href="#">Home</a>
+                <a class="breadcrumb-item text-dark" href="#">Accueil</a>
                 <a class="breadcrumb-item text-dark" href="#">Boutique</a>
                 <span class="breadcrumb-item active">liste</span>
             </nav>
@@ -46,7 +46,7 @@
                     </div>
                     <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                         <input type="checkbox" class="custom-control-input" id="price-4">
-                        <label class="custom-control-label" for="price-4">F300 - 400F</label>
+                        <label class="custom-control-label" for="price-4">300F - 400F</label>
                         <span class="badge border font-weight-normal">145</span>
                     </div>
                     <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between">
