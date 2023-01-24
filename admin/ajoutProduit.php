@@ -15,9 +15,10 @@
         $tof= $_FILES['image']['name'];
         $upload="../asset/images/".$tof;
         
+        
         move_uploaded_file($_FILES['image']['tmp_name'], $upload);
 
-        $ajoutProduit = $db->query("INSERT INTO 'produit' VALUES (NULL, '$nomProduit', '$description', '$tof', '$prix', '$categorie' )");
+        $ajoutProduit = $db->query("INSERT INTO produit VALUES (NULL, '$nomProduit', '$description', '$tof', '$prix', '$categorie' )");
 
         if($ajoutProduit==TRUE){
             header("location:produit.php");
