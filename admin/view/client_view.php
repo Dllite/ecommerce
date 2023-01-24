@@ -8,6 +8,8 @@
                             <ul class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Tableau de bord</a></li>
                                 <li class="breadcrumb-item active">Liste des clients</li>
+
+                               
                             </ul>
                         </div>
                     </div>
@@ -21,15 +23,21 @@
                                     <table class="table table-hover table-center mb-0">
                                         <thead>
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Registered date</th>
-                                                <th>Login time</th>
-                                                <th>Logout time</th>
-                                                <th>Last login</th>
+                                                <th>Nom d'utilisateur</th>
+                                                <th>Date d'enregistrement </th>
+                                                <th>Email</th>
+                                                <th>Ville </th>
+                                                <th>Pays</th>
                                                 <th class="text-end">Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            <?php 
+                                                while($result=$inf->fetch_assoc()){
+
+                                                
+
+                                            ?>
                                             <tr>
                                                 <td>
                                                     <h2 class="table-avatar">
@@ -37,149 +45,26 @@
                                                                 class="avatar-img rounded-circle"
                                                                 src="assets/img/profiles/avatar-03.jpg"
                                                                 alt="User Image"></a>
-                                                        <a href="general.html">John Lee <span>#0001</span></a>
+                                                        <a href="#"><?= $result['nomUtilisateur']?> <span><?= $result['id']?></span></a>
                                                     </h2>
                                                 </td>
-                                                <td>01 Oct 2019</td>
-                                                <td>01.00 PM</td>
-                                                <td>03.54 PM</td>
-                                                <td>11.00 PM</td>
+                                                <td>01 Oct 2022</td>
+                                                <td><?= $result['email']?></td>
+                                                <td>Douala</td>
+                                                <td>Cameroun</td>
                                                 <td class="text-end">
                                                     <div class="actions">
-                                                        <a href="#" class="btn btn-sm bg-success-light me-2">
+                                                        <a href="?user=<?=$result['nomUtilisateur']?>&?id=<?=$result['id']?>" class="btn btn-sm bg-success-light me-2">
                                                             <i class="fe fe-pencil"></i>
                                                         </a>
-                                                        <a href="#" class="btn btn-sm bg-danger-light">
+                                                        <a href="?del=<?=$result['nomUtilisateur']?>&?id=<?=$result['id']?>" class="btn btn-sm bg-danger-light">
                                                             <i class="fe fe-trash"></i>
                                                         </a>
                                                     </div>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td>
-                                                    <h2 class="table-avatar">
-                                                        <a href="general.html" class="avatar avatar-sm me-2"><img
-                                                                class="avatar-img rounded-circle"
-                                                                src="assets/img/profiles/avatar-04.jpg"
-                                                                alt="User Image"></a>
-                                                        <a href="general.html">Joe <span>#0002</span></a>
-                                                    </h2>
-                                                </td>
-                                                <td>23 Jan 2020</td>
-                                                <td>10.00 AM</td>
-                                                <td>03.12 PM</td>
-                                                <td>10.00 AM</td>
-                                                <td class="text-end">
-                                                    <div class="actions">
-                                                        <a href="#" class="btn btn-sm bg-success-light me-2">
-                                                            <i class="fe fe-pencil"></i>
-                                                        </a>
-                                                        <a href="#" class="btn btn-sm bg-danger-light">
-                                                            <i class="fe fe-trash"></i>
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <h2 class="table-avatar">
-                                                        <a href="general.html" class="avatar avatar-sm me-2"><img
-                                                                class="avatar-img rounded-circle"
-                                                                src="assets/img/profiles/avatar-05.jpg"
-                                                                alt="User Image"></a>
-                                                        <a href="general.html">Mary Wiley <span>#0003</span></a>
-                                                    </h2>
-                                                </td>
-                                                <td>14 Feb 2020</td>
-                                                <td>12.03 PM</td>
-                                                <td>11.40 PM</td>
-                                                <td>10.00 AM</td>
-                                                <td class="text-end">
-                                                    <div class="actions">
-                                                        <a href="#" class="btn btn-sm bg-success-light me-2">
-                                                            <i class="fe fe-pencil"></i>
-                                                        </a>
-                                                        <a href="#" class="btn btn-sm bg-danger-light">
-                                                            <i class="fe fe-trash"></i>
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <h2 class="table-avatar">
-                                                        <a href="general.html" class="avatar avatar-sm me-2"><img
-                                                                class="avatar-img rounded-circle"
-                                                                src="assets/img/profiles/avatar-06.jpg"
-                                                                alt="User Image"></a>
-                                                        <a href="general.html">Amy Bond <span>#0004</span></a>
-                                                    </h2>
-                                                </td>
-                                                <td>18 Apr 2020</td>
-                                                <td>09.10 AM</td>
-                                                <td>05.30 PM</td>
-                                                <td>06.00 PM</td>
-                                                <td class="text-end">
-                                                    <div class="actions">
-                                                        <a href="#" class="btn btn-sm bg-success-light me-2">
-                                                            <i class="fe fe-pencil"></i>
-                                                        </a>
-                                                        <a href="#" class="btn btn-sm bg-danger-light">
-                                                            <i class="fe fe-trash"></i>
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <h2 class="table-avatar">
-                                                        <a href="general.html" class="avatar avatar-sm me-2"><img
-                                                                class="avatar-img rounded-circle"
-                                                                src="assets/img/profiles/avatar-07.jpg"
-                                                                alt="User Image"></a>
-                                                        <a href="general.html">Clara Brady <span>#0005</span></a>
-                                                    </h2>
-                                                </td>
-                                                <td>20 Apr 2020</td>
-                                                <td>01.00 PM</td>
-                                                <td>09.54 PM</td>
-                                                <td>08.00 AM</td>
-                                                <td class="text-end">
-                                                    <div class="actions">
-                                                        <a href="#" class="btn btn-sm bg-success-light me-2">
-                                                            <i class="fe fe-pencil"></i>
-                                                        </a>
-                                                        <a href="#" class="btn btn-sm bg-danger-light">
-                                                            <i class="fe fe-trash"></i>
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <h2 class="table-avatar">
-                                                        <a href="general.html" class="avatar avatar-sm me-2"><img
-                                                                class="avatar-img rounded-circle"
-                                                                src="assets/img/profiles/avatar-08.jpg"
-                                                                alt="User Image"></a>
-                                                        <a href="general.html">Robert Martin <span>#0006</span></a>
-                                                    </h2>
-                                                </td>
-                                                <td>08 Jun 2020</td>
-                                                <td>10.00 AM</td>
-                                                <td>07.00 PM</td>
-                                                <td>10.00 AM</td>
-                                                <td class="text-end">
-                                                    <div class="actions">
-                                                        <a href="#" class="btn btn-sm bg-success-light me-2">
-                                                            <i class="fe fe-pencil"></i>
-                                                        </a>
-                                                        <a href="#" class="btn btn-sm bg-danger-light">
-                                                            <i class="fe fe-trash"></i>
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                            <?php }?>
+                                            
                                         </tbody>
                                     </table>
                                 </div>

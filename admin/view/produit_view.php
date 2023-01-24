@@ -19,7 +19,7 @@
                         <div class="card">
                             <div class="card-header">
                                 
-                                <a href="" class="btn btn-primary">Ajouter </a>
+                                <a href="ajoutProduit.php" class="btn btn-primary">Ajouter </a>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -35,26 +35,31 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            <?php 
+                                                while($ligne=$produit->fetch_assoc()){
+                                                   
+                                               // $im = $ligne['image'];
+                                            ?>
                                             <tr>
                                                 <td><div class="avatar">
-                                                            <img class="avatar-img rounded" alt="Image utilisateur" src="assets/img/profiles/avatar-02.jpg">
+                                                            <img class="avatar-img rounded" alt="Image utilisateur" src="../asset/images/<?=$ligne['image']?>">
                                                             </div></td>
-                                                <td>System Architect</td>
-                                                <td>Edinburgh</td>
-                                                <td>61</td>
-                                                <td>2011/04/25</td>
+                                                <td><?= $ligne['nomProduit']?></td>
+                                                <td><?= $ligne['categorie']?></td>
+                                                <td><?= $ligne['description']?></td>
+                                                <td>10</td>
                                                 <td>
                                                     <div class="actions">
-                                                        <a href="#" class="btn btn-sm bg-success-light me-2">
+                                                        <a href="?edit" class="btn btn-sm bg-success-light me-2">
                                                             <i class="fe fe-pencil"></i>
                                                         </a>
-                                                        <a href="#" class="btn btn-sm bg-danger-light">
+                                                        <a href="?del" class="btn btn-sm bg-danger-light">
                                                             <i class="fe fe-trash"></i>
                                                         </a>
                                                     </div>
                                                 </td>
                                             </tr>
-                                           
+                                           <?php }?>
                                             
                                         </tbody>
                                     </table>

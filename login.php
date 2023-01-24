@@ -62,7 +62,7 @@
         if($username&&$password&&$password){
             $inscription = $db->query("INSERT INTO client VALUES(NULL, '$username', '$email', '$password')");
             if($inscription==TRUE){
-                echo "Inscription terminé";
+                header("location:index.php");
             }else{
                 echo "echec";
             }

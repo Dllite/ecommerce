@@ -52,7 +52,7 @@
 
                         <div class="card card-table flex-fill">
                             <div class="card-header">
-                                <h4 class="card-title float-start">User List</h4>
+                                <h4 class="card-title float-start">Liste des clients </h4>
                                 <div class="table-search float-end">
                                     <input type="text" class="form-control" placeholder="Search">
                                     <button class="btn" type="submit"><i class="fa fa-search"></i></button>
@@ -63,8 +63,8 @@
                                     <table class="table table-hover table-center">
                                         <thead>
                                             <tr>
-                                                <th>User Id</th>
-                                                <th>User Name</th>
+                                                <th> Id</th>
+                                                <th>Nom de </th>
                                                 <th class="text-center">Joined Date</th>
                                                 <th class="text-center">Last Seen</th>
                                                 <th class="text-end">Status</th>

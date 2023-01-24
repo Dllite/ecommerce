@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <title>Dreamchat - Dashboard</title>
+    <title>Bayam Sallam - Tableau de bord</title>
 
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
 
@@ -26,11 +26,11 @@
         <div class="header">
 
             <div class="header-left">
-                <a href="index.html" class="logo">
-                    <img src="assets/img/logo.png" alt="Logo">
+                <a href="index.php" class="logo">
+                    
                 </a>
-                <a href="index.html" class="logo logo-small">
-                    <img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
+                <a href="index.php" class="logo logo-small">
+                    <h1></h1>
                 </a>
             </div>
 
@@ -58,43 +58,11 @@
                     <div class="dropdown-menu notifications">
                         <div class="topnav-dropdown-header">
                             <span class="notification-title">Notifications</span>
-                            <a href="javascript:void(0)" class="clear-noti"> Clear All </a>
+                            <a href="javascript:void(0)" class="clear-noti"> Effacer tous </a>
                         </div>
                         <div class="noti-content">
                             <ul class="notification-list">
-                                <li class="notification-message">
-                                    <a href="#">
-                                        <div class="media d-flex">
-                                            <span class="avatar avatar-sm flex-shrink-0">
-                                                <img class="avatar-img rounded-circle" alt="User Image"
-                                                    src="assets/img/profiles/avatar-02.jpg">
-                                            </span>
-                                            <div class="media-body flex-grow-1">
-                                                <p class="noti-details"><span class="noti-title">Carlson Tech</span> has
-                                                    approved <span class="noti-title">your estimate</span></p>
-                                                <p class="noti-time"><span class="notification-time">4 mins ago</span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="notification-message">
-                                    <a href="#">
-                                        <div class="media d-flex">
-                                            <span class="avatar avatar-sm flex-shrink-0">
-                                                <img class="avatar-img rounded-circle" alt="User Image"
-                                                    src="assets/img/profiles/avatar-11.jpg">
-                                            </span>
-                                            <div class="media-body flex-grow-1">
-                                                <p class="noti-details"><span class="noti-title">International Software
-                                                        Inc</span> has sent you a invoice in the amount of <span
-                                                        class="noti-title">$218</span></p>
-                                                <p class="noti-time"><span class="notification-time">6 mins ago</span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
+                                
                                 <li class="notification-message">
                                     <a href="#">
                                         <div class="media d-flex">
@@ -150,7 +118,7 @@
                                     class="avatar-img rounded-circle">
                             </div>
                             <div class="user-text">
-                                <h6>Seema Sisty</h6>
+                                <h6><?= $result['nomUtilisateur']?></h6>
                                 <p class="text-muted mb-0">Administrateur</p>
                             </div>
                         </div>
