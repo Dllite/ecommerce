@@ -2,11 +2,11 @@
 <div class="container-fluid bg-dark text-secondary mt-5 pt-5">
     <div class="row px-xl-5 pt-5">
         <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
-            <h5 class="text-secondary text-uppercase mb-4">Bayam Sallam</h5>
-            <p class="mb-4">Bayam Sallam est un site de vente des produits au Cameroun, acheter depuis le canapé de
-                votre salon et faites vous livrés dans les minutes qui suivent.</p>
+            <h5 class="text-secondary text-uppercase mb-4">Bayam Sellam</h5>
+            <p class="mb-4">Bayam Sallam est un site de vente des produits au Cameroun. Achetez depuis le canapé de
+                votre salon et faites vous livrer dans les minutes qui suivent.</p>
             <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>Douala, Cameroun</p>
-            <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>info@bayamsaller.com</p>
+            <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>info@bayamsellam.com</p>
             <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>+237 657-091-917</p>
         </div>
         <div class="col-lg-8 col-md-12">
